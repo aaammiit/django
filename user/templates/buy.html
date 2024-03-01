@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+</head>
+
+<body>
+    {%include 'nav.html'%}
+    <h2 style="text-align: center;margin-top: 30px;">CheckOut Form</h2>
+    <form action="" method="post" style="margin-top: 20px;">
+        {%csrf_token%}
+        <table class="d-flex justify-content-center align-items-center my-2 m">
+            <tbody><tr></tr><tr>
+    <th><label for="id_email" class="form-label">Email:</label></th>
+    <td>
+      
+      <input type="email" name="email" maxlength="254" required="" id="id_email" fdprocessedid="c3btma" class="form-control">
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_contact" class="form-label">Contact:</label></th>
+    <td>
+      
+      <input type="text" name="contact" maxlength="50" required="" id="id_contact" fdprocessedid="dp9hhe" class="form-control">
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_address" class="form-label">Address:</label></th>
+    <td>
+      
+      <textarea name="address" cols="40" rows="10" required="" id="id_address" class="form-control"></textarea>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_quantity" class="form-label">Quantity:</label></th>
+    <td>
+      
+      <input type="number" name="quantity" value="1" required="" id="id_quantity" fdprocessedid="xczu8k" class="form-control">
+      
+      
+        
+      
+    </td>
+  </tr>
+  <!-- <tr>
+    <th><label for="id_quantity" class="form-label">Date:</label></th>
+    <td>
+      
+      <input type="date" name="quantity" value="1" required="" id="id_quantity" fdprocessedid="xczu8k" name="date"   class="form-control">
+      
+      
+        
+      
+    </td>
+  </tr> -->
+  <tr>
+    <td>
+
+        <a href="/" class="btn btn-outline-info  btn-lg  " tabindex="-1" role="button"
+            aria-disabled="true">Cancle</a>
+    </td>
+    <td>
+
+        <button type="submit" value="submit" class=" btn-outline-success my-4  btn-lg" style="margin-left: 30px;">Check Out</button>
+    </td>
+
+</tr>
+        </tbody></table>
+    </form>
+</body>
+
+</html>

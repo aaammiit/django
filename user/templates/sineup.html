@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sineup</title>
+</head>
+<body>
+    {%include 'nav.html'%}
+    
+    <form action="" method="post">
+      {%csrf_token%}
+        <h2 style="text-align: center;margin-top: 60px;">Resister Here</h2>
+        <table class="d-flex justify-content-center align-items-center my-2 m">
+          
+            <tbody><tr></tr>
+              <!-- <div class="mb-3">
+                <tr>
+    <th><label for="id_username" class="form-label">Email:</label></th>
+    <td>
+      
+      <input type="email" id="formGroupExampleInput" class="form-control" name="email" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username" fdprocessedid="qgyig9">
+      
+        <br> -->
+       
+      
+      
+    </td>
+  </tr>
+</div>
+                <div class="mb-3">
+                <tr>
+    <th><label for="id_username" class="form-label">Username:</label></th>
+    <td>
+      
+      <input type="text" id="formGroupExampleInput" class="form-control" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username" fdprocessedid="qgyig9">
+      
+        <br>
+       
+      
+      
+    </td>
+  </tr>
+</div>
+<div class="mb-3">
+  <tr>
+    <th><label for="id_password1" class="form-label">Password:</label></th>
+    <td>
+      
+      <input type="password" id="formGroupExampleInput" class="form-control" name="password1" autocomplete="new-password" required="" id="id_password1" fdprocessedid="rjlt8r">
+      
+        <br>
+       
+      
+      
+    </td>
+  </tr>
+</div>
+<div class="mb-3">
+  <tr>
+    <th><label for="id_password2" class="form-label">Password confirmation:</label></th>
+    <td>
+      
+      <input type="password"  id="formGroupExampleInput" class="form-control" name="password2" autocomplete="new-password" required="" id="id_password2" fdprocessedid="dr47v">
+      
+       
+      
+        
+      
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+      <a href="/" class="btn btn-outline-info  " tabindex="-1" role="button" aria-disabled="true">Cancle</a>
+    </td>
+    <td>
+       
+<button type="submit" value="submit"   class=" btn-outline-success my-4">Resister</button>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+       if Already Resister? <a href="login" class="btn btn-info btn-lg " tabindex="-1" role="button" aria-disabled="true">Login Here</a>
+    </td>
+  </tr>
+</div>
+        </tbody></table>
+    </form>
+</body>
+</html>

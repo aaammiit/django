@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+
+<body>
+    {%include 'nav.html'%}
+    
+    <form action="" method="post">
+        {%csrf_token%}
+        <h2 style="text-align: center;margin-top: 60px;">Payment Here</h2>
+        <table class="d-flex justify-content-center align-items-center my-2 m">
+            <tbody>
+                <tr></tr>
+                
+
+
+
+                </td>
+                </tr>
+                </div>
+                <div class="mb-3">
+                    <tr>
+                        <th><label for="id_username" class="form-label">Email:</label></th>
+                        <td>
+
+                            <input type="email" id="formGroupExampleInput" class="form-control" name="email"
+                                maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required=""
+                                id="id_username" fdprocessedid="qgyig9">
+
+                            <br>
+
+
+
+                        </td>
+                    </tr>
+                </div>
+                <div class="mb-3">
+                    <tr>
+                        <th><label for="id_username" class="form-label">Amount:</label></th>
+                        <td>
+
+                            <input type="number" id="formGroupExampleInput" class="form-control" name="amount"
+                                maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required=""
+                                id="id_username" fdprocessedid="qgyig9">
+
+                            <br>
+
+
+
+                        </td>
+                    </tr>
+                </div>
+                
+                
+                
+                    <tr>
+                        
+                        <td>
+
+                            <button type="submit" value="submit" class=" btn-outline-success btn-lg  my-4">Pay Here</button>
+                        </td>
+
+                    
+                </div>
+            </tbody>
+        </table>
+    </form>
+    {%if pay%}
+     
+    <div class="text-center mx auto">
+      <form action="/sucess" method="post">
+        {%csrf_token%}
+        <script 
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="rzp_test_DmsiQJWNQbXlww"
+        data-amount=""
+        data-currency="INR"
+        data-order_id="{{pay.id}}"
+        data-buttontext="Pay with Razorpay"
+        data-name="AmIsTrEeT"
+        data-description=""
+        
+        data-profile.name=""
+        data-profile.email=""
+        data-theme.color="#F34256"
+        
+        ></script>
+        <input type="hidden" name="hidden/" custom="Hidden Element">
+  
+      </form>
+  
+    </div>
+    {%endif%}
+</body>
+
+</html>
